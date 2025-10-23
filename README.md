@@ -11,11 +11,14 @@ The hook is implemented only for `kea-dhcp4` service.
 ## Parameters
 ### Optional
 `runtime-logging` - Boolean type (by default: false). Determines whether to log lease rejection events from clients to the log file.
+
 `renew-rejected-addresses` - Boolean type (by default: false). Determines whether the last address request timer should be updated even if the address was rejected by the server.
 
 ### Required
 `enabled` - Boolean type. Determines the hook's operating status. False - disabled. True - enabled.
+
 `requests-interval-seconds` - Unsigned Integer. Specifies the number of seconds after which the client is allowed to request the address again.
+
 `max-clients-storage-size` - Unsigned Integer. While the hook is running, its memory stores information about users MAC addresses and the time of their last attempt to request an address. This parameter determines the number of clients that can be simultaneously stored in the hook's memory.
 
 ## Example configuration
